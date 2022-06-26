@@ -49,6 +49,7 @@
     }
     .headline{
         font-size: 36px;
+        margin-top: 22px;
     }
     .kress{
         top: 1.56vw;
@@ -169,6 +170,9 @@
         position: absolute;
         left: 0;
         top: 10px;
+    }
+    .pod {
+        width: 71.53vw;
     }
 }
 
