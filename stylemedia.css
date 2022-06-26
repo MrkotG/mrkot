@@ -233,4 +233,10 @@
         width: 74.22vw;
         height: 51vw;
     }
+    .burger_meny{
+        width: 50%;
+    }
+    .burger_meny a {
+        font-size: 4vw;
+    }
 }
