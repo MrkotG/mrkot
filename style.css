@@ -1,0 +1,454 @@
+a{
+	text-decoration: none;
+}
+/*Подключение шрифтов*/
+@font-face {
+    font-family: 'Honda';
+    src: url('fonts/honda/Hondafont.eot');
+    src: url('fonts/honda/Hondafont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/honda/Hondafont.woff2') format('woff2'),
+        url('fonts/honda/Hondafont.woff') format('woff'),
+        url('fonts/honda/Hondafont.ttf') format('truetype'),
+        url('fonts/honda/Hondafont.svg#Hondafont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*Остальное*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.headline{ /*Заголовок*/
+    color: black;
+    text-transform: uppercase;
+    margin: 1.04vw 0;
+    text-align: center;
+    font-size: 1.25vw;
+    font-weight: bolder;
+}
+
+body{
+    font-family: HeliosCondWeb,sans-serif;
+}
+/*-------------------------------------\↓/bloc1\↓/-------------------------------------------*/
+nav{ /*------Навигация "Верхня пaнель"------*/
+    z-index: 2;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+
+#nav-pos{ /*Позиция элеентов навигации*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.78vw 1.04vw;
+}
+.dannye{
+
+}
+nav #burger{/*Бургер*/
+    width: 1.56vw;
+}
+
+nav #burger:hover{/*Бургер изменение курсора*/
+    cursor: pointer;
+}
+
+nav #burger p{/*Цвет Бургер*/
+    background-color: white;
+}
+
+nav #burger p:first-of-type, /*верхняя и нижняя полоска*/
+nav #burger p:last-of-type {/*Бургер ширина и высота полосок*/
+    width: 1.56vw;
+    height: 0.10vw;
+}
+
+nav #burger p:nth-of-type(2n){/*Бургер ширина и высота средней полосоки */
+    width: 1.20vw;
+    height: 0.10vw;
+    margin: 0.36vw 0;
+}
+
+.burger_meny{/*рамка в регистрация и авторизация*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 10;
+    transition: all 0.5s ease;
+    width: 20%;
+    height: 100%;
+    background-color: white;
+}
+.burger_meny a{
+    font-size: 1.04vw;
+    color: black;
+}
+.burger_meny p{
+    position: absolute;
+}
+.kresti:hover{
+    cursor: pointer;
+}
+.kress{
+    background-color: black;
+    top: 1.25vw;
+    left: 0.57vw;
+    border: solid black 1px;
+    padding-left: 25px;
+}
+
+.kress:first-of-type{    
+    transform: rotate(45deg);
+}
+.kress:last-of-type{    
+    transform: rotate(-45deg);
+}
+
+
+nav a{/*Лого выравнивание*/
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a p:first-of-type{/*Верхний лого Размер, Шрифт текста отступы между буквами, убирание подчеркивание*/
+    font-size: 0.78vw;
+    text-transform: uppercase;
+    font-family: Honda;
+    letter-spacing: 0.21vw;
+}
+
+nav a p:last-of-type{/*Нижний Лого*/
+    font-size: 0.68vw;
+    margin-top: 0.26vw;
+}
+
+nav img{/*Картинка аккаунта*/
+    width: 1.30vw;
+    height: 1.30vw;
+}
+
+nav img:hover{/*Картинка аккаунта смена курсора*/
+    cursor: pointer;
+}
+/*-------------------------------------\↓/Header\↓/-------------------------------------------*/
+header{ /*Фоновая картинка*/
+    height: 100vh;
+    background: url('jmg/зленьперед.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+header #img-pos{ /*Размер и выравнивание соцсети*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+header #img-pos img{ /*Размер картинки соцсети*/   
+    width: 2.08vw;
+    height: 2.08vw;
+    margin: 1.20vw;
+}
+.reg_avtor { /*рамка в регистрация и авторизация*/
+    top: -1px;
+    left: 0px;
+    position: absolute;
+    transition: all 0.5s ease;
+    transform: translateY(-270px);
+    width: 100%;
+    height: 270px;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+}
+.active{ /*перемещение по вертикале*/
+    transform: translateY(0px);
+}
+.minikotik{ /*расположение авторизации и Регестрация*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.minikotik a{
+    font-size: 25px;
+    color: black;
+}
+.akk_kotik{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.akk_kotik p{
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+
+}
+.exit_akk{
+    text-decoration: none;
+    user-select: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+}
+.krest{ /*расположение креста*/
+    position: absolute;
+    right: 0px;
+    margin: 30px;
+}
+
+header #img-pos img:hover{ /*Изменение курсора*/
+    cursor: pointer;
+}
+.vk,.telegram,.youtube{
+    width: 3%;
+}
+/*-----------------------------------About us\↓/bloc2\↓/-------------------------------------------------*/
+
+#aboutUs-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#up{ /*Выравниевание минблоков по сетке*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    justify-items: center;
+}
+
+
+/*Блоки*/
+.aboutUs-conent-block{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.aboutUs-conent-block *{
+    position: relative;
+    transition: 0.4s ease-in-out all;
+}
+
+.aboutUs-conent-block:hover{
+    cursor: pointer;
+}
+
+.aboutUs-conent-block:hover img:first-of-type{
+    transform: scale(1.1);
+}
+
+.aboutUs-conent-block:hover .text{
+    transform: translateY(-75px);
+}
+
+.aboutUs-conent-block:hover .text p:last-of-type{
+    opacity: 1;
+}
+/*Задняя картинка*/
+.aboutUs-conent-block img:first-of-type{
+    width: 360px;
+    height: 440px;
+}
+#last.aboutUs-conent-block  img:first-of-type {
+    width: 1140px;
+    height: 440px;
+}
+/*Лого*/
+.aboutUs-conent-block img:last-of-type{
+    width: 130px;
+    left: 11px;
+    bottom: 430px;
+}
+/* Текст */
+.aboutUs-conent-block .text{
+    bottom: 190px;
+    left: 15px;
+}
+
+.aboutUs-conent-block .text p{
+    color: white;
+}
+
+.aboutUs-conent-block .text p:first-of-type{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.aboutUs-conent-block .text p:nth-of-type(2n){
+    font-size: 20px;
+    margin: 10px 0;
+}
+#down .aboutUs-conent-block .text p:nth-of-type(2n) {
+    text-transform: uppercase;
+}
+.aboutUs-conent-block .text p:last-of-type{
+    font-size: 50px;
+    opacity: 0;
+}
+/* Нижний блок */
+
+/*-------------------------------------\↓/bloc3\↓/-------------------------------------------*/
+.conteyner3{ /*выравниевание картинок*/
+	display: flex;
+	flex-flow: row wrap;
+ 	justify-content: center;	
+ 	justify-content: space-evenly;
+}
+.kultavto{ /*грницы блоков под картинками*/
+    width: 29.22vw;
+    height: 20.0vw;
+    overflow: hidden;
+    background: red;
+    border-radius: 0.26vw;
+}
+.nameavto{ /*Название машин*/
+	text-align: center;
+	margin-left: 1.04vw;
+	display: block;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 1.35vw;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 1.04vw;
+}
+
+.podrob{ /*линия под подробно*/
+	border-bottom: 0.05vw solid black;
+	padding-bottom: 0.52vw; 
+    
+}
+.podrob span{
+    font-weight: bold;
+    cursor: pointer;
+}
+.podrob:active{ /*меняетсяс при нажатие на подробно*/
+	display: block;
+    width: 100%;
+    overflow: hidden;
+    background: grey;	
+}
+.pod{ /*ширина текста*/
+	width: 28.53vw;
+
+}
+
+/*-------------------------------------\↓/bloc4\↓/-------------------------------------------*/
+.set1, .set2{ /*Расположение картинок в инсте*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*-------------------------------------\↓/bloc5\↓/-------------------------------------------*/
+.bloc5{
+	margin-bottom: 2.60vw;
+}
+
+.fds{
+    display: block;
+    width: 18.75vw;
+    height: 12.50vw;
+    overflow: hidden;
+    background: grey;
+    z-index: -1;
+}
+
+.novosti{
+	display: flex;
+    justify-content: center;
+    margin: 1.04vw auto;
+    overflow: hidden;
+
+}
+
+.cla{
+	margin-right: 1.04vw;
+    display: flex;
+    transition: all ease 1s;
+}
+
+.news_date{
+    margin-top: 10px;
+	display: block;
+    margin-bottom: 0.68vw;
+    font-size: 0.79vw;
+    line-height: 1;
+    color: #a3acba;
+    text-transform: uppercase;
+}
+.news_title{
+	display: block;
+    font-weight: 700;
+    font-size: 1.04vw;
+    line-height: 1.2;
+    color: #3d3d3d;
+}
+.testa{
+	display: block;
+    padding: 0px 0.94vw 0.78vw;
+}
+
+/*-------------------------------------\↓/Footer up\↓/-------------------------------------------*/
+
+.footer_up{
+	padding-top: 2.60vw;
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #CAC9B4;
+}
+.footer_up h3{
+	font-weight: 700;
+    font-size: 0.93vw;
+    line-height: 1;
+    color: #3d3d3d;
+    text-transform: uppercase;    
+	margin-bottom: 1.77vw;
+}
+.ros, .word_honda, .inf{
+	display: flex;
+	flex-direction: column;
+
+}
+.ros a, .word_honda a, .inf a, .prava{
+	margin-bottom: 0.83vw;
+    font-family: Helvetica Neue LT W10_55 Roman,sans-serif;
+    font-size: 0.88vw;
+    color: #3d3d3d;
+}
+.logo_footer{
+
+}
+.prava{
+	margin-top: 0.52vw;
+	text-align: center;
+}
+/*-------------------------------------\↓/footer bottom\↓/-------------------------------------------*/
+.footer_bottom{
+	background-color: grey;
+	padding: 0.52vw 0px 0.52vw 0px;
+}
+.fot_boot a{
+	margin-left: 1.04vw;
+	font-size: 0.83vw;
+	color: #fff;
+}
+
+/*-------------------------------------\↓/Адаптив\↓/-------------------------------------------*/

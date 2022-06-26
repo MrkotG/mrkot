@@ -1,0 +1,280 @@
+<? session_start(); ?>
+<!DOCTYPE html><!-- Сообщаем браузеру, как стоит обрабатывать страницу -->
+<html lang="ru"><!-- Указываем язык -->
+<head><!-- Заголовок страницы, контейнер для других важных данны (не отоборажается) -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="stylemedia.css">
+	<link rel="shortcut icon" type="image/x-icon" href="jmg/favicon.ico"><!-- Иконка на вкладке -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Указываем кодировку страницы -->
+	<title>Верстка</title><!-- Заголовок страницы в браузере -->
+</head>
+<body><!-- Тело страницы (видно пользователю) -->
+<div>           
+	<div class="burger_meny">	
+		<div class="kresti">
+			<p class="kress"></p>
+			<p class="kress"></p>
+		</div>
+		<a href="#">Honda в России</a>
+		<a href="#">Культовые автомобили honda</a>
+		<a href="#">Инстаграмм</a>
+		<a href="#">Новости honda</a>
+	</div>
+    <nav>
+        <div id="nav-pos"> <!-- Шапка -->
+            <div id="burger"> <!-- Бургер -->
+                <p class="menuUp"></p>
+                <p class="menuSred"></p>
+                <p class="menuDovn"></p>
+            </div>
+
+
+            <a href="#">
+                <p>Honda</p><!-- Логотип -->
+                <p>The Power of Dreams</p><!-- Логотип -->
+            </a>
+            <img src="jmg/akk копия.png" alt="" id="profile"> <!-- Иконка аккаунта -->
+            <div class="reg_avtor">
+            	<div class="krest">
+            		<img class="img_rest" src="jmg/крест.png" alt="">
+            	</div>
+	            <div class="minikotik">
+	            	<?if($_SESSION['islogin']==false) {?>
+	            	<span><a href="Авторизация/Авторизация.php">Войти</a></span>
+	            	<span><a href="Регестрация/Регестрация.php">Зарегистрироваться</a>
+	            	</span>
+	            	<?} else { ?>
+	            		<div class="exit_akk">
+	            			<form action="logout.php">
+	            				<input type="submit" class="exit_akk" name="logout" value="Выход" href="#">
+	            			</form>
+	            		</div>
+		            	<div class="akk_kotik">
+					    <?
+							echo '<p>'.$_SESSION['fam'].'</p>';
+							echo '<p>'.$_SESSION['name'].'</p>';
+							echo '<p>'.$_SESSION['email'].'</p>';
+		            	?>
+		            		
+		            	</div>
+
+	            	<?};?>
+            	</div>
+            </div>
+            
+        </div>
+    </nav>
+    <header>
+        <div id="img-pos">
+            <a href="https://honda.ru"><img src="jmg/Соцсети.png" alt=""></a> <!-- Иконка соцсетей -->
+        </div>
+
+    </header>
+<!---------------------------------------\↓/bloc2\↓/--------------------------------------------->
+    <div id="aboutUs">
+        <p class="headline">Honda в россии</p> <!-- Заголовок -->
+        <div id="aboutUs-content">
+            <div id="up">
+                <div class="aboutUs-conent-block"> <!-- Автомобиль -->
+                    <img src="jmg/test/авто.png" alt="">
+                    <img src="jmg/Лого блок.png" alt="">
+                    <div class="text">
+                        <p>Автомобили</p>
+                        <p>Сайт автомобилей</p>
+                        <p>→</p>
+                    </div>
+                </div>
+                <div class="aboutUs-conent-block"><!-- Квадрацикл -->
+                    <img src="jmg/test/квадроцикл.png" alt="">
+                    <img src="jmg/Лого блок.png" alt="">
+                    <div class="text">
+                        <p>Квадроцикл</p>
+                        <p>Сайт квадроциклов</p>
+                        <p>→</p>
+                    </div>
+                </div>
+                <div class="aboutUs-conent-block"><!-- Мотоцикл -->
+                    <img src="jmg/test/moto.png" alt="">
+                    <img src="jmg/Лого блок.png" alt="">
+                    <div class="text">
+                        <p>Мотоцикл</p>
+                        <p>Сайт мотоциклов</p>
+                        <p>→</p>
+                    </div>
+                </div>
+                <div class="aboutUs-conent-block"><!-- Лодки -->
+                    <img src="jmg/test/лодки.png" alt="">
+                    <img src="jmg/Лого блок.png" alt="">
+                    <div class="text">
+                        <p>Лодки</p>
+                        <p>Сайт водно-моторной техники</p>
+                        <p>→</p>
+                    </div>
+                </div>
+                <div class="aboutUs-conent-block"><!-- Газонокосилки -->
+                    <img src="jmg/test/газонокосилки.png" alt="">
+                    <img src="jmg/Лого блок.png" alt="">
+                    <div class="text">
+                        <p>Газонокосилки</p>
+                        <p>Сайт садовой и силовой техники</p>
+                        <p>→</p>
+                    </div>
+                </div>
+                <div class="aboutUs-conent-block"><!-- Двигатель -->
+                    <img src="jmg/test/двигатели.png" alt="" style="filter: brightness(70%);">
+                    <img src="jmg/Лого блок.png" alt="">
+                    <div class="text">
+                        <p>Двигатели</p>
+                        <p>Сайт двигателей</p>
+                        <p>→</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!---------------------------------------\↓/bloc3\↓/--------------------------------------------->
+	<div class="bloc3"     style="margin-bottom: 20px;">
+		<h2 class="headline">КУЛЬТОВЫЕ АВТОМОБИЛИ HONDA</h2><!--Заголовок-->
+		<div class="conteyner3">
+
+			<div class="nsx">
+				<img class="kultavto" src="блок3/hondansx.jpg" alt="">
+				<p class="nameavto">Honda NSX</p>
+				<details class="podrob">
+					<summary><span>Подробнее</span></summary>
+					<p class="pod">Истинная легенда, начавшая как субкомпакт и перешедшая в 2001 году в класс компакт-каров. С течением времени из этой линейки выросло множество отдельных моделей, но основой всегда оставался надежный, экономичный и доступный семейный автомобиль. Нельзя не сказать и о таких его спортивных версиях, как Civic Type-R, Civic GTi и Civic SiR. Машина совершенствовалась из поколения в поколение, из которых на данный момент выпускается уже девятое. Успех этой модели во многом предопределил репутацию Honda как одного из самых громких имен мировой автоиндустрии.</p>
+				</details>	
+			</div>
+
+			<div class="civic">
+				<img class="kultavto" src="блок3/hondacivic.jpg" alt="">
+				<p class="nameavto">Honda Civic</p>
+				<details class="podrob">
+					<summary ><span>Подробнее</span></summary>
+					<p class="pod">Перечисляя лучшие Honda было бы настоящим преступлением не указать этот автомобиль! Единственный истинный суперкар японского производителя приобрел статус легенды благодаря опережающим инновациям и несравненной надежности. Запуск первого поколения этой машины произвел эффект разорвавшейся бомбы, а журналисты единогласно признали, что у таких концернов, как Ferrari, Jaguar и Porsche просто не было, чем ответить! Можно долго перечислять те нововведения, которые стали частью NSX: полностью изготовленный из алюминия кузов и шасси, полностью электронный усилитель руля и педаль газа (Drive-by-Wire), шатуны из титана и свечи зажигания из платины. При всем этом автомобиль имел превосходную аэродинамику! Оборудован он был 3,2-литровым моторым V6 мощностью в 280 л.с., который располагался посередине. Несмотря на солидный возраст, у авто до сих пор преданная армия фанатов – это и не удивительно, так как многие NSX на сегодняшний день все ещё в идеальном состоянии. Известно множество экземпляров, намотавших более 300,000 км с минимальным ремонтом, что для автоэкзотики настоящий рекорд!</p>
+				</details>		
+			</div>
+
+			<div class="s2000">
+				<img class="kultavto" src="блок3/hondaS2000.jpg" alt="">
+				<p class="nameavto">Honda S2000</p>
+				<details class="podrob">
+					<summary><span>Подробнее</span></summary>
+					<p class="pod">Последний спорткар Honda из легендарной линейки “S”. Этим автомобилем компания отметила пятьдесят лет со дня своего основания. Подарок получался более чем удачный, собрав за два поколения модели огромное количество хвалебных отзывов. Это авто чествовали за элегантный внешний вид, мощный двигатель, высокую скорость, сбалансированное управление и плавную работу коробки передач. По версиям многочисленных журналов и ТВ-шоу спорткар не раз удостаивался звания «Автомобиль года». Не смотря на то, что интерес к этому авто с 2007 года резко упал, оно однозначно заслужило себе место в рейтинге Honda.</p>
+				</details>
+			</div>
+		</div>
+	</div>
+<!---------------------------------------\↓/bloc4\↓/--------------------------------------------->
+	<div class="bloc4">
+		<h2 class="headline">ИНСТАГРАММ</h2><!--Заголовок-->
+		<div class="set1">
+			<img class="inst" src="jmg/инста/фотожоп/nsx.jpg" alt="">
+			<img class="inst" src="jmg/инста/фотожоп/acord.jpg" alt="">
+			<img class="inst" src="jmg/инста/фотожоп/bolid.jpg" alt="">
+			<img class="inst" src="jmg/инста/фотожоп/красная.jpg" alt="">
+		</div>
+		<div class="set2">
+			<img class="inst" src="jmg/инста/фотожоп/мотоCшлемом.jpg" alt="">
+			<img class="inst" src="jmg/инста/фотожоп/драг.jpg" alt="">
+			<img class="inst" src="jmg/инста/фотожоп/желтыйцивик.jpg" alt="">
+			<img class="inst" src="jmg/инста/фотожоп/S2000.jpg" alt="">
+		</div>
+	</div>
+<!---------------------------------------\↓/bloc5\↓/--------------------------------------------->
+	<div class="bloc5">
+		
+			<h2 class="headline">НОВОСТИ HONDA</h2><!--Заголовок-->
+
+		<div class="novosti">
+				<div class="cla">
+				<span>
+					<img class="fds" src="jmg/новости/космонафт.jpg" alt="">
+					<span class="testa">
+						<span class="news_date">05 Мая</span>
+						<span class="news_title">Honda расширяет границы сферы человеческой деятельности в космосе </span>
+					</span>
+				</span>
+			</div>
+
+				<div class="cla">
+				<span>
+					<img class="fds" src="jmg/новости/кросМотоКрасный.jpg" alt="">
+					<span class="testa">
+						<span class="news_date">10 Мая</span>
+						<span class="news_title">HONDA CRF250RX 2023 модельного года</span>
+					</span>
+				</span>
+			</div>
+
+			<div class="cla">
+				<span>
+					<img class="fds" src="jmg/новости/машина на тросах.png" alt="">
+					<span class="testa">
+						<span class="news_date">28 Марта</span>
+						<span class="news_title">Honda построила современный аэродинамический тоннель</span>
+					</span>
+				</span>
+			</div>
+
+			<div class="cla">
+				<span>
+					<img class="fds" src="jmg/новости/мотоцикл.jpg" alt="">
+					<span class="testa">
+						<span class="news_date">07 Апреля</span>
+						<span class="news_title">Honda представляет пять моделей мотоциклов в рамках широкомасштабного анонса</span>
+					</span>
+				</span>				
+			</div>
+		</div>
+	</div>
+<!---------------------------------------\↓/Footer\↓/--------------------------------------------->
+	<footer class="footer">
+		<div class="footer_up">
+			<div class="rooss">
+				<h3>HONDA В РОССИИ</h3>
+				<div class="ros">
+					<a href="">Автомобили</a>
+					<a href="">Мотоциклы</a>
+					<a href="">Квадроциклы</a>
+					<a href="">Силовая техника</a>
+					<a href="">Водно-моторная техника</a>
+					<a href="">Двигатели</a>
+				</div>
+			</div>
+			<div class="word">
+				<h3>МИР HONDA</h3>
+					<div class="word_honda">
+						<a href="">История компании</a>
+						<a href="">Новости Honda</a>
+						<a href="">Спортивные новости</a>
+					</div>
+			</div>	
+			<div class="informaishen">
+				<h3>ИНФОРМАЦИЯ</h3>
+					<div class="inf">
+						<a href="">Контакты</a>
+					</div>
+			</div>
+
+			<div class="logo_footer">
+				<img src="jmg/Лого блок.svg" alt="">
+				<p class="prava">Honda.Все права<br> защещены</p>
+			</div>
+		</div>
+
+		<div class="footer_bottom">
+			<div class="fot_boot">
+				<a href="">Политика конфиденциальности</a>
+				<a href="">Условия пользования</a>
+				<a href="">Защита персональных данных</a>
+				<a href="">Правовая информация</a>
+			</div>
+		</div>
+	</footer>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
