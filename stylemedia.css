@@ -1,163 +1,223 @@
 /*-------------------------------------\↓/Адаптив\↓/-------------------------------------------*/
-@media only screen and (max-width: 1366px){
-header{ /*Фоновая картинка*/
-    height: 100vh;
-    background: url('jmg/1366передзелень.jpg') no-repeat;
-    background-size: 100% 100%;
+@media screen and (max-width: 1366px){
+    header{ /*Фоновая картинка*/
+        height: 100vh;
+        background: url('jmg/1366передзелень.jpg') no-repeat;
+        background-size: 100% 100%;
+    }
+    .kress{
+        top: 1.35vw;
+    }
+    .minikotik a{
+        font-size: 20px;
+    }
+
+    .novosti{
+        display: flex;
+        max-width: 82%;
+        margin: 20px auto;
+        overflow: hidden;
+    }
 }
-.kress{
-    top: 1.35vw;
-}
-.minikotik a{
-    font-size: 20px;
+@media screen and (max-width: 1200px){
+    header{ /*Фоновая картинка*/
+        height: 100vh;
+        background: url('jmg/1200передзелень.jpg') no-repeat;
+        background-size: 100% 100%;
+    }
+    .minikotik a{
+        font-size: 25px;
+    }
+
+    #up{ /*Выравниевание минблоков по сетке*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 25px;
+        justify-items: center;
+    }
+    .set1 img, .set2 img{
+        width: 20.83vw;
+        height: 34.17vw;
+    }
 }
 
-.novosti{
-    display: flex;
-    max-width: 82%;
-    margin: 20px auto;
-    overflow: hidden;
-}
-}
-@media only screen and (max-width: 1200px){
-header{ /*Фоновая картинка*/
-    height: 100vh;
-    background: url('jmg/1200передзелень.jpg') no-repeat;
-    background-size: 100% 100%;
-}
-.minikotik a{
-    font-size: 25px;
+@media screen and (max-width: 961px){
+    header{ /*Фоновая картинка*/
+        height: 100vh;
+        background: url('jmg/i.webp') no-repeat;
+        background-size: 100% 100%;
+    }
+    .headline{
+        font-size: 36px;
+    }
+    .kress{
+        top: 1.56vw;
+    }
+    .minikotik {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    nav #burger p:first-of-type, /*верхняя и нижняя полоска*/
+    nav #burger p:last-of-type {/*Бургер ширина и высота полосок*/
+        width: 2.7vw;
+        height: 0.3vw;
+    }
+
+    nav #burger p:nth-of-type(2n){/*Бургер ширина и высота средней полосоки */
+        width: 2vw;
+        height: 0.3vw;
+        margin: 0.36vw 0;
+    }
+    nav a p:first-of-type{/*Верхний лого Размер*/
+        font-size: 1.78vw;
+
+    }
+
+    nav a p:last-of-type{/*Нижний Лого*/
+        font-size: 1.4vw;
+    }
+    nav img{/*Картинка аккаунта*/
+        width: 2.50vw;
+        height: 2.50vw;
+    }
+    .minikotik a{
+        font-size: 25px;
+    }
+    .akk_kotik{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #aboutUs-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #up{ /*Выравниевание минблоков по сетке*/
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 25px;
+        justify-items: center;
+    }
+    .kultavto {
+        width: 49.22vw;
+        height: 33vw;
+    }
+    .conteyner3 {
+        flex-direction: column;
+        align-items: center;
+        flex-flow: column wrap; 
+        justify-content: center;
+    }
+    .nameavto{
+        font-size: 24px;
+    }
+    .novosti {
+        flex-direction: column;
+        align-items: center;
+    }
+    .fds {
+        width: 36.75vw;
+        height: 23.5vw;
+    }
+    .news_date {
+        font-size: 19px;
+    }
+    .cla {
+        width: 300px;
+    }
+    .news_title {
+        font-size: 24px;
+    }
+    .ros a, .word_honda a, .inf a, .prava {
+        font-size: 20px;
+    }
+    .footer_up h3 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 1;
+        color: #3d3d3d;
+        text-transform: uppercase;
+        margin-bottom: 1.77vw;
+    }
+    .footer_up{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .fot_boot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fot_boot a {
+        margin-top: 15px;
+        font-size: 30px;
+    }
 }
 
-#up{ /*Выравниевание минблоков по сетке*/
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 25px;
-    justify-items: center;
-}
-.set1 img, .set2 img{
-    width: 20.83vw;
-    height: 34.17vw;
-}
-}
-
-@media only screen and (max-width: 961px){
-header{ /*Фоновая картинка*/
-    height: 100vh;
-    background: url('jmg/i.webp') no-repeat;
-    background-size: 100% 100%;
-}
-.kress{
-    top: 1.56vw;
-}
-.minikotik {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
-nav #burger p:first-of-type, /*верхняя и нижняя полоска*/
-nav #burger p:last-of-type {/*Бургер ширина и высота полосок*/
-    width: 2.7vw;
-    height: 0.3vw;
-}
-
-nav #burger p:nth-of-type(2n){/*Бургер ширина и высота средней полосоки */
-    width: 2vw;
-    height: 0.3vw;
-    margin: 0.36vw 0;
-}
-nav a p:first-of-type{/*Верхний лого Размер*/
-    font-size: 1.78vw;
-
-}
-
-nav a p:last-of-type{/*Нижний Лого*/
-    font-size: 1.4vw;
-}
-nav img{/*Картинка аккаунта*/
-    width: 2.50vw;
-    height: 2.50vw;
-}
-.minikotik a{
-    font-size: 25px;
-}
-.akk_kotik{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-#aboutUs-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-#up{ /*Выравниевание минблоков по сетке*/
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 25px;
-    justify-items: center;
-}
 
 
+@media screen and (max-width: 750px){
+    header{ /*Фоновая картинка*/
+        height: 100vh;
+        background: url('jmg/acura-nsx-gt3-evo-2019-front-r0-750x1334.jpg') no-repeat;
+        background-size: 100% 100%;
+    }
+    .kress{
+        top: 2.08vw;
+    }
+    nav #burger p:first-of-type, /*верхняя и нижняя полоска*/
+    nav #burger p:last-of-type {/*Бургер ширина и высота полосок*/
+        width: 2.7vw;
+        height: 0.40vw;
+    }
 
-@media only screen and (max-width: 750px){
-header{ /*Фоновая картинка*/
-    height: 100vh;
-    background: url('jmg/acura-nsx-gt3-evo-2019-front-r0-750x1334.jpg') no-repeat;
-    background-size: 100% 100%;
-}
-.kress{
-    top: 2.08vw;
-}
-nav #burger p:first-of-type, /*верхняя и нижняя полоска*/
-nav #burger p:last-of-type {/*Бургер ширина и высота полосок*/
-    width: 2.7vw;
-    height: 0.40vw;
-}
+    nav #burger p:nth-of-type(2n){/*Бургер ширина и высота средней полосоки */
+        width: 2vw;
+        height: 0.5vw;
+        margin: 0.36vw 0;
+    }
+    nav a p:first-of-type{/*Верхний лого Размер*/
+        font-size: 1.78vw;
 
-nav #burger p:nth-of-type(2n){/*Бургер ширина и высота средней полосоки */
-    width: 2vw;
-    height: 0.5vw;
-    margin: 0.36vw 0;
-}
-nav a p:first-of-type{/*Верхний лого Размер*/
-    font-size: 1.78vw;
+    }
 
-}
+    nav a p:last-of-type{/*Нижний Лого*/
+        font-size: 1.4vw;
+    }
+    .minikotik {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    nav img{/*Картинка аккаунта*/
+        width: 2.90vw;
+        height: 2.90vw;
+    }
+    .minikotik a{
+        font-size: 20px;
+    }
 
-nav a p:last-of-type{/*Нижний Лого*/
-    font-size: 1.4vw;
-}
-.minikotik {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
-nav img{/*Картинка аккаунта*/
-    width: 2.90vw;
-    height: 2.90vw;
-}
-.minikotik a{
-    font-size: 20px;
-}
+    #aboutUs-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
-#aboutUs-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-#up{ /*Выравниевание минблоков по сетке*/
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 25px;
-    justify-items: center;
+    #up{ /*Выравниевание минблоков по сетке*/
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 25px;
+        justify-items: center;
+    }
 }
